@@ -1,17 +1,13 @@
-import React from "react";
-import SideMenu from "./components/SideMenu";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function Layout({ children }) {
   return (
-    <>
-      <div className="flex gap-5 bg-gray-200/40">
-        <SideMenu />
-        {children}
-        <ToastContainer />
-      </div>
-    </>
+    <div>
+      <Header />
+      {children}
+      <Footer />
+    </div>
   );
 }
 
