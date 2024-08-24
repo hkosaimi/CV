@@ -21,7 +21,7 @@ function Product({ img }) {
         variants={productVariants}
         initial="hidden"
         whileInView="visible"
-        className="w-[210px] lg:flex-1 rounded-lg  overflow-hidden">
+        className="w-[210px] lg:flex-1 rounded-lg  overflow-hidden col-span-1">
         <Link to="/">
           <div className="bg-gray-50 rounded-lg border  hover:shadow-[0_0_10px_rgba(0,0,0,0.2)]">
             <img className="w-full h-[300px] object-cover drop-shadow-2xl" src={img} />
