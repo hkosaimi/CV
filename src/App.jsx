@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useAnimate, useInView } from "framer-motion";
+import { motion, useAnimate, useInView, AnimatePresence } from "framer-motion";
 import Grid from "./components/Grid";
 import clsx from "clsx";
 import { useLocation } from "react-router-dom";
@@ -79,13 +79,19 @@ function App() {
   };
   return (
     <div className="mx-auto w-[90%] lg:w-3/4  flex flex-col lg:flex-row  justify-around">
-      {show && (
-        <div
-          onClick={handleGoUp}
-          className="fixed cursor-pointer hover:opacity-80 transition-all duration-300 bottom-10 right-5 backdrop-blur-md rounded-xl shadow-lg z-50 ">
-          <ArrowBigUpDash className="text-white" size={50} />
-        </div>
-      )}
+      <AnimatePresence>
+        {show && (
+          <motion.div
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100vw" }}
+            transition={{ duration: 1 }}
+            onClick={handleGoUp}
+            className="fixed cursor-pointer p-1 drop-shadow-md hover:opacity-80 transition-all duration-300 bottom-10 right-5 backdrop-blur-md rounded-xl shadow-lg z-50 ">
+            <ArrowBigUpDash className="text-white" size={50} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         variants={parent}
         initial="initial"
