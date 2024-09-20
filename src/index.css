@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, rgb(1, 1, 26), rgb(1, 1, 52));
+  background: linear-gradient(135deg, rgb(2, 2, 41), rgb(1, 1, 52));
 }
 
 .text-gradient {
-  background: linear-gradient(to bottom, white, gray);
+  /* background: linear-gradient(to bottom, white, rgb(164, 163, 163)); */
   z-index: 99999;
-  /*   background: url("./images/q.png"); */
+  background-image: url("./images/q.png");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;

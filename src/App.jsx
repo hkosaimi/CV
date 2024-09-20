@@ -83,8 +83,9 @@ function App() {
         {show && (
           <motion.div
             initial={{ x: "100vw" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100vw" }}
+            animate={{ x: 0, rotate: "180deg" }}
+            whileInView={{ rotate: "0deg" }}
+            exit={{ x: "100vw", rotate: "180deg" }}
             transition={{ duration: 1 }}
             onClick={handleGoUp}
             className="fixed cursor-pointer p-1 drop-shadow-md hover:opacity-80 transition-all duration-300 bottom-10 right-5 backdrop-blur-md rounded-xl shadow-lg z-50 ">
