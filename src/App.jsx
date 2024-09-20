@@ -53,7 +53,7 @@ function App() {
     },
   };
   return (
-    <div className="mx-auto w-3/4  flex flex-col lg:flex-row  justify-around">
+    <div className="mx-auto w-[90%] lg:w-3/4  flex flex-col lg:flex-row  justify-around">
       <motion.div
         variants={parent}
         initial="initial"
@@ -61,19 +61,19 @@ function App() {
         className="text-slate-200 pt-24 lg:pt-0  max-h-screen   lg:w-[700px] self-start  lg:sticky top-24  ">
         <motion.h1
           variants={child}
-          className="text-5xl text-gradient font-bold text-slate-200 mb-4 font-[Inter]  overflow-hidden">
+          className="text-5xl text-gradient font-bold text-slate-200 mb-4  ">
           Hussain Al-Osaimi
         </motion.h1>
         <motion.p variants={child} className="mb-4 font-medium text-2xl">
           Computer engineer
         </motion.p>
-        <motion.p variants={child} className="text-slate-400 text-lg w-4/5">
+        <motion.p variants={child} className="text-slate-400 text-lg lg:w-4/5">
           I specialize in building modern, responsive frontend websites primarily using React and
           Tailwind CSS.
         </motion.p>
         <div className="mt-16">
           <h1 className="text-2xl font-bold">My stack</h1>
-          <div className="flex gap-x-2 w-4/5 flex-wrap">
+          <div className="flex gap-x-2 lg:w-4/5 flex-wrap">
             {myStack.map((x, i) => (
               <span key={i} className="py-1 px-3 bg-teal-400/10 text-teal-400  rounded-full mt-4">
                 {x}
