@@ -10,9 +10,10 @@ import Footer from "./components/Footer";
 import Social from "./components/Social";
 import { myStack, experience, projects, articles } from "./assets/data/data";
 import Span from "./components/Span";
-
+import { ArrowBigUpDash } from "lucide-react";
 function App() {
   const [hash, setHash] = useState("");
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -27,7 +28,31 @@ function App() {
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
+  console.log(window.scrollY);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleGoUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   const parent = {
     initial: {
       opacity: 0,
@@ -54,6 +79,13 @@ function App() {
   };
   return (
     <div className="mx-auto w-[90%] lg:w-3/4  flex flex-col lg:flex-row  justify-around">
+      {show && (
+        <div
+          onClick={handleGoUp}
+          className="fixed cursor-pointer hover:opacity-80 transition-all duration-300 bottom-10 right-5 backdrop-blur-md rounded-xl shadow-lg z-50 ">
+          <ArrowBigUpDash className="text-white" size={50} />
+        </div>
+      )}
       <motion.div
         variants={parent}
         initial="initial"
