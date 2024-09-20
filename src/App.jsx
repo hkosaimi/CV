@@ -98,7 +98,9 @@ function App() {
         initial="initial"
         animate="animate"
         className="text-slate-200 pt-24 lg:pt-0  max-h-screen   lg:w-[700px] self-start  lg:sticky top-24  ">
-        <motion.h1 variants={child} className=" text-5xl text-gradient font-bold  mb-4  ">
+        <motion.h1
+          variants={child}
+          className="text-4xl lg:text-5xl text-gradient font-bold font-[Inter]  mb-4  ">
           Hussain Al-Osaimi
         </motion.h1>
         <motion.p variants={child} className="mb-4 font-medium text-2xl">
