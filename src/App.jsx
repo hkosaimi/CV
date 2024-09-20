@@ -98,6 +98,9 @@ function App() {
         </div> */}
       </motion.div>
       <div id="about" className=" lg:w-[600px] text-slate-400 pt-24  text-lg">
+        <h1 className="lg:hidden font-bold text-white mb-4 uppercase sticky top-0 p-4 backdrop-blur-md">
+          About
+        </h1>
         <p className=" mb-4">
           As a computer engineer, diving into the world of <Span>frontend</Span> and web development
           felt like a natural extension of my passion for problem-solving and creating{" "}
@@ -117,6 +120,9 @@ function App() {
           hanging out with my friends
         </p>
         <div id="experince" className=" pt-24 flex flex-col">
+          <h1 className="lg:hidden font-bold text-white mb-4 uppercase sticky top-0 p-4 backdrop-blur-md">
+            Experience
+          </h1>
           {experience.map((item, i) => (
             <Experience
               key={i}
@@ -128,6 +134,9 @@ function App() {
           ))}
         </div>
         <div id="projects" className="pt-24 flex flex-col">
+          <h1 className="lg:hidden font-bold text-white mb-4 uppercase sticky top-0 p-4 backdrop-blur-md">
+            Projects
+          </h1>
           {projects.map((item, i) => (
             <Projects
               img={item.img}
@@ -138,6 +147,9 @@ function App() {
           ))}
         </div>
         <div id="articles" className="pt-24 flex flex-col">
+          <h1 className="lg:hidden font-bold text-white mb-4 uppercase sticky top-0 p-4 backdrop-blur-md">
+            Articles
+          </h1>
           {articles.map((item, i) => (
             <Articles img={item.img} title={item.title} date={item.date} />
           ))}
