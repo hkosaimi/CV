@@ -17,7 +17,7 @@ body {
 .text-gradient {
   /* background: linear-gradient(to bottom, white, rgb(164, 163, 163)); */
   z-index: 99999;
-  background-image: url("./images/q.png");
+  background-image: url("./assets/q.png");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
