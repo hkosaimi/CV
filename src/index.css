@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Inter";
+  src: url("./assets//fonts/Inter-Black.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Manrope";
+  /*  background: rgb(8, 1, 35); */
+  background: linear-gradient(135deg, rgb(1, 1, 26), rgb(1, 1, 52));
+}
+
+.text-gradient {
+  /*  background: linear-gradient(to bottom, #ffffff, #939292); */
+  background: url("./images/q.png") bottom;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: moveBackground 5s ease forwards;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 70% 0%;
+  }
 }
